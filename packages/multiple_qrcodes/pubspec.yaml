@@ -1,0 +1,21 @@
+name: multiple_qrcodes
+description: A package that enables single to many QR code generation
+version: 0.0.1
+author: Kira Core JSC
+homepage: https://kiracore.com/
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_swiper: ^1.1.6
+  qr_flutter: ^3.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter: null
