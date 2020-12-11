@@ -1,38 +1,48 @@
-library multiple_qrcodes;
+library saifu_qr;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_page_indicator/flutter_page_indicator.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 
-class MultiQRcode extends StatefulWidget {
+// ignore: must_be_immutable
+class SaifuQR extends StatefulWidget {
+  // Original data passed through
   var data;
+  // {rocessed data split into frames
   var frameData;
+  // Specifies how many character frames to split the [data] into [frameData]
   var charPerFrame;
+  // This is the duration/speed of the transition from one qr to another (when multiple qr are displayed)
   double transitionDuration;
   final double fade;
   final double scale;
+  // Decide for a swiple layout between DEFAULT, STACK, TINDER, and CUSTOM
   final SwiperLayout layout;
   final bool loop;
   final bool autoplay;
   final double viewportFraction;
   final PageIndicatorLayout indicatorLayout;
   final Axis scrollDirection;
-  //final Alignment paginationAlignment;
-  //final Color paginationColor;
-  //final Color paginationActiveColor;
+  final Alignment paginationAlignment;
+  final Color paginationColor;
+  final Color paginationActiveColor;
   final Color boxShadowColor;
   final Offset boxShadowOffset;
   final double boxShadowBlurRadius;
+  // QRErrorCorrectLevel.H / M / S, higher levels ensures the qr can be read more correctly and less errors likely [more data is used]
   final int errorCorrectionalLevel;
+  // Displays a Error message instead of the qr
   final String qrErrorMessage;
   final double minCharacterSize;
   final double maxCharacterSize;
+  // Breaks the slider between the qr, that decides char lengths, into sections
   final int charSliderDivisions;
+  // Mins and Maxes for the transition duration, this affects the slider.
   final minTransitionDuration;
   final maxTransitionDuration;
 
-  MultiQRcode({
+  SaifuQR({
     Key key,
     this.charPerFrame: 100,
     @required this.data,
@@ -44,11 +54,11 @@ class MultiQRcode extends StatefulWidget {
     this.loop: false,
     this.autoplay: true,
     this.viewportFraction: 0.8,
-    this.indicatorLayout,
+    this.indicatorLayout: PageIndicatorLayout.NONE,
     this.scrollDirection: Axis.horizontal,
-    //this.paginationAlignment,
-    //this.paginationColor: Colors.grey,
-    //this.paginationActiveColor: const Color(0xff38547C),
+    this.paginationAlignment,
+    this.paginationColor: Colors.grey,
+    this.paginationActiveColor: const Color(0xff38547C),
     this.boxShadowColor: Colors.grey,
     this.boxShadowOffset: const Offset(0.0, 1.0),
     this.boxShadowBlurRadius: 15,
@@ -62,10 +72,10 @@ class MultiQRcode extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _MultiQRcodeState createState() => _MultiQRcodeState();
+  _SaifuQRcodeState createState() => _SaifuQRcodeState();
 }
 
-class _MultiQRcodeState extends State<MultiQRcode> {
+class _SaifuQRcodeState extends State<SaifuQR> {
   @override
   void initState() {
     handleQRData();
@@ -95,6 +105,9 @@ class _MultiQRcodeState extends State<MultiQRcode> {
       return Stack(
         children: [
           Swiper(
+            //control: new SwiperControl(color: Colors.red),
+            //itemHeight: 350, //  this property is valid if layout=STACK or layout=TINDER or LAYOUT=CUSTOM,
+            //itemWidth: 350, // this property is valid if layout=STACK or layout=TINDER or LAYOUT=CUSTOM,
             fade: widget.fade,
             scale: widget.scale,
             loop: widget.loop,
@@ -105,7 +118,11 @@ class _MultiQRcodeState extends State<MultiQRcode> {
             indicatorLayout: widget.indicatorLayout,
             scrollDirection: widget.scrollDirection,
             itemCount: widget.data.length,
-            //pagination: new SwiperPagination(alignment: widget.paginationAlignment, builder: RectSwiperPaginationBuilder(color: widget.paginationColor, activeColor: widget.paginationActiveColor)),
+            // There are three multiples of pagination builder
+            // DotSwiperPaginationBuilder(); // For dotted
+            // FractionPaginationBuilder(); // Fractional/Numberical "1/30"
+            // RectSwiperPaginationBuilder(); // No indicator
+            pagination: new SwiperPagination(alignment: widget.paginationAlignment, builder: RectSwiperPaginationBuilder(color: widget.paginationColor, activeColor: widget.paginationActiveColor)),
             itemBuilder: (BuildContext context, int index) {
               return Stack(
                 alignment: Alignment.center,
@@ -113,7 +130,7 @@ class _MultiQRcodeState extends State<MultiQRcode> {
                   Container(
                     margin: EdgeInsets.all(50),
                     decoration: BoxDecoration(color: Colors.white, shape: BoxShape.rectangle, borderRadius: BorderRadius.all(Radius.circular(12)), boxShadow: [
-                      BoxShadow(color: widget.boxShadowColor, offset: widget.boxShadowOffset, blurRadius: widget.boxShadowBlurRadius) //(x,y)
+                      BoxShadow(color: widget.boxShadowColor, offset: widget.boxShadowOffset, blurRadius: widget.boxShadowBlurRadius)
                     ]),
                     child: QrImage(
                       data: widget.data[index],

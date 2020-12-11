@@ -9,11 +9,11 @@ This release includes addition features that will enable you to change it to sui
 
 #### Usage
 
-To use this plugin, add multiple_qrcodes as a dependency in your [pubspec.yaml file](https://flutter.dev/docs/development/packages-and-plugins/using-packages)
+To use this plugin, add saifu_qr as a dependency in your [pubspec.yaml file](https://flutter.dev/docs/development/packages-and-plugins/using-packages)
 
 Import it into your dart file
 
-    import 'package:multiple_qrcodes/multiple_qrcodes.dart';
+    import 'package:saifu_qr/saifu_qr.dart';
 
 #### Example
 
@@ -24,5 +24,5 @@ Import it into your dart file
                     SizedBox(
                         width: 500,
                         height: 500,
-                        child: MultiQRcode(data: txtController.text),
+                        child: SaifuQR(data: txtController.text),
                             )]));
