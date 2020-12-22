@@ -31,9 +31,9 @@ This package includes addition features that will enable you to change it to sui
 
 | # Swiper Layouts | # Screenshot                         | # Code Example       |
 | ---------------- | ------------------------------------ | -------------------- |
-| # Stack          | ![](/images/swiperLayoutStack.PNG)   | SwiperLayout.STACK   |
-| # Tinder         | ![](/images/swiperLayoutTinder.PNG)  | SwiperLayout.TINDER  |
-| # Default        | ![](/images/swiperLayoutDefault.PNG) | SwiperLayout.DEFAULT |
+| # Stack          | ![](https://imgur.com/5m0Os8S.png)   | SwiperLayout.STACK   |
+| # Tinder         | ![](https://imgur.com/7vmtVuh.png)  | SwiperLayout.TINDER  |
+| # Default        | ![](https://imgur.com/hykj6dO.png) | SwiperLayout.DEFAULT |
 | # Custom         |                                      | SwiperLayout.CUSTOM  |
 
 _refer to the Swiper library (https://github.com/best-flutter/flutter_swiper) for more information on layouts and building a custom one.
@@ -42,15 +42,15 @@ to build a custom one or issue with NULL error at initialisation of multiple fra
 e.g.
 | # Control | # Screenshot | # Code Example |
 | ----------------------------- | ------------------------ | ------------------------------------------------------ |
-| # SwiperControl | ![](/images/controls.PNG) | control: new SwiperControl(color: Colors.red), | |
-| # Page Indicator.(DROP/SLIDE e.g.) | ![](/images/paginationDot.PNG) | PageIndicatorLayout.DROP| |
+| # SwiperControl | ![](https://imgur.com/exoJHM7.png) | control: new SwiperControl(color: Colors.red), | |
+| # Page Indicator.(DROP/SLIDE e.g.) | ![](https://imgur.com/WAb3tmW) | PageIndicatorLayout.DROP| |
 
 Pagination Builder
 | # Page Pagination Types | # Screenshot | # Code Example |
 | ----------------------------- | ------------------------ | ------------------------------------------------------ |
-| # DotSwiper| ![](/images/paginationDot.PNG) | DotSwiperPaginationBuilder() |
-| # Fraction| ![](/images/fractionPaginationBuilder.PNG) | FractionPaginationBuilder(); |
-| # RectSwiper // No Indicator| ![](/images/swiperLayoutDefault.PNG =250x) | RectSwiperPaginationBuilder |
+| # DotSwiper| ![](https://imgur.com/WAb3tmW.png) | DotSwiperPaginationBuilder() |
+| # Fraction| ![](https://imgur.com/QFBz9Wj.png) | FractionPaginationBuilder(); |
+| # RectSwiper // No Indicator| ![](https://imgur.com/hykj6dO.png) | RectSwiperPaginationBuilder |
 
 These properties are required to be depending on the type of builder used:
 itemHeight: x --> this property is valid if layout=STACK or layout=TINDER or LAYOUT=CUSTOM,
