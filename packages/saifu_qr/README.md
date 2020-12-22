@@ -24,7 +24,7 @@ Import it into your dart file
                     SizedBox(
                         width: 500,
                         height: 500,
-                        child: MultiQRcode(data: txtController.text),
+                        child: SaifuQR(data: txtController.text),
                             )]));
 
 This package includes addition features that will enable you to change it to suit your criteria.
