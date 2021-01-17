@@ -1,0 +1,21 @@
+name: saifu_fast_qr
+description: This is Fast QR displaying, for faster scanning and sharing of QR data. This is a varient of the original SaifuQR package
+version: 0.0.1
+homepage: https://kiracore.com/
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_swiper: ^1.1.6
+  qr_flutter: ^3.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  integration_test:
+    sdk: flutter
+
+flutter:
