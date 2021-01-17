@@ -39,19 +39,31 @@ This package includes addition features that will enable you to change it to sui
 _refer to the Swiper library (https://github.com/best-flutter/flutter_swiper) for more information on layouts and building a custom one.
 to build a custom one or issue with NULL error at initialisation of multiple frames : https://github.com/best-flutter/flutter_swiper/issues/139#issuecomment-553876950 _
 
-e.g.
-| # Control | # Screenshot | # Code Example |
-| ----------------------------- | ------------------------ | ------------------------------------------------------ |
-| # SwiperControl | <img src="https://imgur.com/exoJHM7.png"  height="400"> | control: new SwiperControl(color: Colors.red), | |
-| # Page Indicator.(DROP/SLIDE e.g.) | <img src="https://imgur.com/WAb3tmW.png"  height="400">| PageIndicatorLayout.DROP| |
+## SwiperControl
 
-Pagination Builder
-| # Page Pagination Types | # Screenshot | # Code Example |
-| ----------------------------- | ------------------------ | ------------------------------------------------------ |
-| # DotSwiper| <img src="https://imgur.com/WAb3tmW.png"  height="400"> | DotSwiperPaginationBuilder() |
-| # Fraction| <img src="https://imgur.com/QFBz9Wj.png"  height="400">| FractionPaginationBuilder(); |
-| # RectSwiper // No Indicator| <img src="https://imgur.com/hykj6dO.png"  height="400"> | RectSwiperPaginationBuilder |
+control: new SwiperControl(color: Colors.red)
+<img src="https://imgur.com/exoJHM7.png"  height="400">
+
+## Page Indicator.(DROP/SLIDE e.g.)
+
+PageIndicatorLayout.DROP
+<img src="https://imgur.com/WAb3tmW.png"  height="400">
+
+# Pagination Builder
+
+DotSwiper
+DotSwiperPaginationBuilder()
+<img src="https://imgur.com/WAb3tmW.png"  height="400">
+
+Fraction
+FractionPaginationBuilder();
+<img src="https://imgur.com/QFBz9Wj.png"  height="400">
+
+RectSwiper
+RectSwiperPaginationBuilder();
+<img src="https://imgur.com/hykj6dO.png"  height="400">
 
 These properties are required to be depending on the type of builder used:
+e.g.
 itemHeight: x --> this property is valid if layout=STACK or layout=TINDER or LAYOUT=CUSTOM,
 itemWidth: x --> this property is valid if layout=STACK or layout=TINDER or LAYOUT=CUSTOM,

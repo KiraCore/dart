@@ -1,3 +1,7 @@
+## [0.1.0] - 2021-01-17
+
+Version issue fixed, and improved documentation
+
 ## [0.0.2] - 2020-12-23
 
 Images should now be showing in the dart dev packages website.
