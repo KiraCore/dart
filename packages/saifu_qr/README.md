@@ -29,12 +29,12 @@ Import it into your dart file
 
 This package includes addition features that will enable you to change it to suit your criteria.
 
-| # Swiper Layouts | # Screenshot                         | # Code Example       |
-| ---------------- | ------------------------------------ | -------------------- |
-| # Stack          | ![](https://imgur.com/5m0Os8S.png)   | SwiperLayout.STACK   |
-| # Tinder         | ![](https://imgur.com/7vmtVuh.png)  | SwiperLayout.TINDER  |
-| # Default        | ![](https://imgur.com/hykj6dO.png) | SwiperLayout.DEFAULT |
-| # Custom         |                                      | SwiperLayout.CUSTOM  |
+| # Swiper Layouts | # Screenshot                                            | # Code Example       |
+| ---------------- | ------------------------------------------------------- | -------------------- |
+| # Stack          | <img src="https://imgur.com/5m0Os8S.png"  height="400"> | SwiperLayout.STACK   |
+| # Tinder         | <img src="https://imgur.com/7vmtVuh.png"  height="400"> | SwiperLayout.TINDER  |
+| # Default        | <img src="https://imgur.com/hykj6dO.png"  height="400"> | SwiperLayout.DEFAULT |
+| # Custom         |                                                         | SwiperLayout.CUSTOM  |
 
 _refer to the Swiper library (https://github.com/best-flutter/flutter_swiper) for more information on layouts and building a custom one.
 to build a custom one or issue with NULL error at initialisation of multiple frames : https://github.com/best-flutter/flutter_swiper/issues/139#issuecomment-553876950 _
@@ -42,15 +42,15 @@ to build a custom one or issue with NULL error at initialisation of multiple fra
 e.g.
 | # Control | # Screenshot | # Code Example |
 | ----------------------------- | ------------------------ | ------------------------------------------------------ |
-| # SwiperControl | ![](https://imgur.com/exoJHM7.png) | control: new SwiperControl(color: Colors.red), | |
-| # Page Indicator.(DROP/SLIDE e.g.) | ![](https://imgur.com/WAb3tmW) | PageIndicatorLayout.DROP| |
+| # SwiperControl | <img src="https://imgur.com/exoJHM7.png"  height="400"> | control: new SwiperControl(color: Colors.red), | |
+| # Page Indicator.(DROP/SLIDE e.g.) | <img src="https://imgur.com/WAb3tmW.png"  height="400">| PageIndicatorLayout.DROP| |
 
 Pagination Builder
 | # Page Pagination Types | # Screenshot | # Code Example |
 | ----------------------------- | ------------------------ | ------------------------------------------------------ |
-| # DotSwiper| ![](https://imgur.com/WAb3tmW.png) | DotSwiperPaginationBuilder() |
-| # Fraction| ![](https://imgur.com/QFBz9Wj.png) | FractionPaginationBuilder(); |
-| # RectSwiper // No Indicator| ![](https://imgur.com/hykj6dO.png) | RectSwiperPaginationBuilder |
+| # DotSwiper| <img src="https://imgur.com/WAb3tmW.png"  height="400"> | DotSwiperPaginationBuilder() |
+| # Fraction| <img src="https://imgur.com/QFBz9Wj.png"  height="400">| FractionPaginationBuilder(); |
+| # RectSwiper // No Indicator| <img src="https://imgur.com/hykj6dO.png"  height="400"> | RectSwiperPaginationBuilder |
 
 These properties are required to be depending on the type of builder used:
 itemHeight: x --> this property is valid if layout=STACK or layout=TINDER or LAYOUT=CUSTOM,

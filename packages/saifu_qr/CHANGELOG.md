@@ -1,3 +1,7 @@
+## [0.0.2] - 2020-12-23
+
+Images should now be showing in the dart dev packages website.
+
 ## [0.0.1] - 2020-12-08
 
 The initial release supports generating one to many QR-codes, that that will be displayed to the user.
